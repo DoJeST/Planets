@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sun's Sistem </title>
+    <style>
+
+        body{
+            background-color: rgb(27, 27, 27);
+            margin: 0;
+            color: rgb(224, 224, 224);
+            font-size: 25px;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sun{
+            background-image: url(https://cdn.suwalls.com/wallpapers/space/sun-22261-1920x1080.jpg);
+        }
+
+        .mercury{
+            background-image: url(https://lh3.googleusercontent.com/proxy/FRlQXMYv-EVWLUFhQ5LMSO4T-pXMfqaTnQJLOsHEUUvqke_N46ZZf3k0oSUA4k8tyBSp8h87ijYA5tE5J15WiA2gLjaVNWQsrEeav53s);
+        }
+
+        .venus{
+            background-image: url(https://storge.pic2.me/c/1360x800/351/592bca8c3bec3.jpg);
+        }
+
+        .earth{
+            background-image: url(https://w-dog.ru/wallpapers/3/1/398924917258399.jpg);
+        }
+
+        .mars{
+            background-image: url(https://cutewallpaper.org/21/4k-mars-wallpaper/Mars-4K-HD-Desktop-Wallpaper-for-4K-Ultra-HD-TV-Wide-.jpg);
+        }
+
+        #name{
+            margin-left: 30px;
+        }
+
+        ul{
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            background-color: rgb(27, 27, 27);
+        }
+
+    </style>
+</head>
+<body class="sun">
+
+    <button id="Bsun"> Sun </button>
+    <button id="Bmercury"> Mercury </button>
+    <button id="Bvenus"> Venus </button>
+    <button id="Bearth"> Earth </button>
+    <button id="Bmars"> Mars </button>
+    
+    <h2 id="name"> Sun </h2>
+
+    <ul>
+        <li id="size"> Size: </li>
+        <li id="weight"> Weight: </li>
+        <li id="temp"> Temperter: </li>
+        <li id="day"> One Day: </li>
+    </ul>
+
+    <script>
+
+        let mercury = {
+            name : 'Mercury',
+            size : 'Size: 2 439, 7 km',
+            weight : 'Weight: 3, 285E23 kg',
+            temp : 'Temperature: 349, 9 °C',
+            day : 'One Day: 58d 15h 30m',
+            class : 'mercury'
+        }
+
+        document.getElementById('Bmercury').addEventListener('click', function(){
+            onPlanet(mercury);
+        })
+
+        function onPlanet(planet){
+
+            document.getElementById('name').innerText = planet.name
+            document.getElementById('size').innerText = planet.size
+            document.getElementById('weight').innerText = planet.weight
+            document.getElementById('temp').innerText = planet.temp
+            document.getElementById('day').innerText = planet.day
+
+        document.getElementsByTagName('body')[0].className = [planet.class]    
+        }
+
+        let venus = {
+            name : 'Venus',
+            size : 'Size: 12 104 km',
+            weight : 'Weight: 4,867E24 kg',
+            temp : 'Temperature: 467 °C',
+            day : 'One Day: 116d 18h',
+            class : 'venus'
+        }
+
+        document.getElementById('Bvenus').addEventListener('click', function(){
+            onPlanet(venus);
+        })
+
+        function onPlanet(planet){
+            
+            document.getElementById('name').innerText = planet.name
+            document.getElementById('size').innerText = planet.size
+            document.getElementById('weight').innerText = planet.weight
+            document.getElementById('temp').innerText = planet.temp
+            document.getElementById('day').innerText = planet.day
+
+        document.getElementsByTagName('body')[0].className = [planet.class]    
+        }
+
+        let sun = {
+            name : 'Sun',
+            size : 'Size: 1 392 700 km',
+            weight : 'Weight: 1,989E30 kg',
+            temp : 'Temperature: 5 778 K',
+            day : 'One Day: - ',
+            class : 'sun'
+        }
+
+        document.getElementById('Bsun').addEventListener('click', function(){
+            onPlanet(sun);
+        })
+
+        function onPlanet(planet){
+            
+            document.getElementById('name').innerText = planet.name
+            document.getElementById('size').innerText = planet.size
+            document.getElementById('weight').innerText = planet.weight
+            document.getElementById('temp').innerText = planet.temp
+            document.getElementById('day').innerText = planet.day
+
+        document.getElementsByTagName('body')[0].className = [planet.class]    
+        }
+
+        let earth = {
+            name : 'Earth',
+            size : 'Size: 12 742 km',
+            weight : 'Weight: 5,972E24 kg',
+            temp : 'Temperature: 25 °C',
+            day : 'One Day: 1d ',
+            class : 'earth'
+        }
+
+        document.getElementById('Bearth').addEventListener('click', function(){
+            onPlanet(earth);
+        })
+
+        function onPlanet(planet){
+            
+            document.getElementById('name').innerText = planet.name
+            document.getElementById('size').innerText = planet.size
+            document.getElementById('weight').innerText = planet.weight
+            document.getElementById('temp').innerText = planet.temp
+            document.getElementById('day').innerText = planet.day
+
+        document.getElementsByTagName('body')[0].className = [planet.class]    
+        }
+
+        let mars = {
+            name : 'Mars',
+            size : 'Size: 3 389,5 km',
+            weight : 'Weight: 6,39E23 kg',
+            temp : 'Temperature: -40 °С',
+            day : 'One Day: 1d 0h 37m',
+            class : 'mars'
+        }
+
+        document.getElementById('Bmars').addEventListener('click', function(){
+            onPlanet(mars);
+        })
+
+        function onPlanet(planet){
+
+            document.getElementById('name').innerText = planet.name
+            document.getElementById('size').innerText = planet.size
+            document.getElementById('weight').innerText = planet.weight
+            document.getElementById('temp').innerText = planet.temp
+            document.getElementById('day').innerText = planet.day
+
+        document.getElementsByTagName('body')[0].className = [planet.class]    
+        }
+
+
+    </script>
+
+</body>
+</html>
